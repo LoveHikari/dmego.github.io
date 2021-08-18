@@ -1,0 +1,37 @@
+# 指定语言环境
+language: node_js
+node_js: stable
+
+# 指定缓存模块，可选。缓存可加快编译速度。
+cache:
+  directories:
+    - node_modules
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+#before_script:
+ # - npm install -g gulp
+
+# 执行清缓存，生成网页操作
+script:
+  - hexo clean
+  - hexo g 
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "LoveHikari" # --{GitHub账户名称}
+  - git config user.email "xmh.yxw@gmail.com" # --{Github账户邮箱}
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_REF}" main:main
+# E: Build LifeCycle
+
+branches:
+  only:
+    - hexo # --{Hexo源码分支名称}
+env:
+ global:
+   - GH_REF: github.com/LoveHikari/dmego.github.io.git # --{仓库地址}
