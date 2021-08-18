@@ -26,7 +26,7 @@ after_script:
   - git config user.email "xmh.yxw@gmail.com" # --{Github’Àªß” œ‰}
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_REF}" master:main
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:main
 # E: Build LifeCycle
 
 branches:
