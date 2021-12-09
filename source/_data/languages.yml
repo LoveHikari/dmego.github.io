@@ -6,11 +6,11 @@ zh-CN:
       # the translation you perfer
       author: 本文博主
   menu:
-  	yume: 自设
-  	chain_link: 链环
-  	friends: 友達
-  	webstack: 网址
-  	goto: 开往
+    yume: 自设
+    links: 链环
+    friends: 友達
+    webstack: 网址
+    goto: 开往
 en:
   menu:
     travellings: Travellings
