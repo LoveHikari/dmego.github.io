@@ -16,12 +16,19 @@ open_graph:
 
 menu:
   home: / || home
+  about:
+  	default: /about/ || user
+  	yume: /about/yume/ || cloud
   posts:
     default: / || feather
     archives: /archives/ || list-alt
     categories: /categories/ || th
     tags: /tags/ || tags
-  friends: /friends/ || heart
+  chain_link:
+  	default: / || magic
+  	friends: /friends/ || heart
+  	webstack: /webstack/ || star
+  goto: https://www.moecat.tk/ || paper-plane
 
 # Social Links
 # Usage: `Key: permalink || icon || color`
